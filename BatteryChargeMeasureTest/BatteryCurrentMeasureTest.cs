@@ -39,5 +39,29 @@ namespace BatteryChargeMeasure.Test
             bool _validReadings = _evaluate.IsReadingsNaN(new List<double> { 2, 3, 3, 4 , 6 });
             Assert.IsFalse(_validReadings);
         }
+        
+        [TestMethod]
+        public void GivenSingleRangeReading_ReturnCurrentRangeWithCount()
+        {
+            BatteryCurrentMeasure _measure = new BatteryCurrentMeasure();
+            List<double> _currentReadings = new List<double>() { 3, 3, 5, 4 };
+            List<CurrentRangeWithCount> _expectedResult = new List<CurrentRangeWithCount>();
+            _expectedResult.Add(new CurrentRangeWithCount() { Range = "3-5", ReadingCount = 4 });
+            List<CurrentRangeWithCount> _actualResult = _measure.GetCurrentRangeWithCount(_currentReadings);
+            Assert.AreEqual(_expectedResult[0].ReadingCount, _actualResult[0].ReadingCount);
+            Assert.AreEqual(_expectedResult[0].Range, _actualResult[0].Range);
+        }
+
+        [TestMethod]
+        public void GivenMultipleRangeReading_ReturnCurrentRangeWithCount()
+        {
+            BatteryCurrentMeasure _measure = new BatteryCurrentMeasure();
+            List<double> _currentReadings = new List<double>() { 3, 3, 5, 4, 10, 11, 12 };
+            List<CurrentRangeWithCount> _expectedResult = new List<CurrentRangeWithCount>();
+            _expectedResult.Add(new CurrentRangeWithCount() { Range = "3-5", ReadingCount = 4 });
+            _expectedResult.Add(new CurrentRangeWithCount() { Range = "10-12", ReadingCount = 3 });
+            List<CurrentRangeWithCount> _actualResult = _measure.GetCurrentRangeWithCount(_currentReadings);
+            Assert.AreEqual(_expectedResult.Count, _actualResult.Count);
+        }
     }
 }
