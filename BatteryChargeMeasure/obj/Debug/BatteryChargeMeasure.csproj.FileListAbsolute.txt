@@ -1,2 +1,0 @@
-C:\Users\BIA1COB\Source\Repos\TDD\BatteryChargeMeasure\obj\Debug\BatteryChargeMeasure.csprojAssemblyReference.cache
-C:\Users\BIA1COB\Source\Repos\TDD\BatteryChargeMeasure\obj\Debug\BatteryChargeMeasure.csproj.CoreCompileInputs.cache
