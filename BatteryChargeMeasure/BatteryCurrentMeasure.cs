@@ -22,7 +22,7 @@ namespace BatteryChargeMeasure
             }        
             return _result;
         }
-    }
+    } 
 
     public class CurrentRangeWithCount
     {
