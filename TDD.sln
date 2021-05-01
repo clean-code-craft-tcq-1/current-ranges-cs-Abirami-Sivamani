@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryChargeMeasure", "BatteryChargeMeasure\BatteryChargeMeasure.csproj", "{87B91C26-E2B8-4F57-84C1-F88A24184DD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryChargeMeasure.Test", "BatteryChargeMeasure.Test\BatteryChargeMeasure.Test.csproj", "{9A5C7B72-3DE5-44A5-8B6D-F93CF2EB5BAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteryChargeMeasure.Test", "BatteryChargeMeasureTest\BatteryChargeMeasure.Test.csproj", "{9A5C7B72-3DE5-44A5-8B6D-F93CF2EB5BAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
